@@ -358,10 +358,76 @@
             réservés</footer>
     </main>
 
-    <script>
-        // année dynamique
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <footer class="bg-[#465070] text-gray-200 py-10 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- Colonne 1 : SEREMAD -->
+            <div>
+            <h2 class="text-xl font-bold mb-3">SEREMAD</h2>
+            <p class="text-sm leading-relaxed mb-4">
+                Réseau de suivi indépendant des politiques Publiques et des stratégiques de coopération.
+            </p>
+            <img src="logo-seremad.png" alt="Logo SEREMAD" class="w-24">
+            </div>
+
+            <!-- Colonne 2 : Liens rapides -->
+            <div>
+            <h3 class="text-lg font-semibold mb-3">Liens rapides</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:underline">Accueil</a></li>
+                <li><a href="#" class="hover:underline">Publications</a></li>
+                <li><a href="#" class="hover:underline">À propos</a></li>
+                <li><a href="#" class="hover:underline">Contacts</a></li>
+            </ul>
+            </div>
+
+            <!-- Colonne 3 : Contacts -->
+            <div>
+            <h3 class="text-lg font-semibold mb-3">Contacts</h3>
+            <ul class="space-y-2 text-sm">
+                <li>ANGUISSA en face du lycée</li>
+                <li>Yaoundé, Cameroun</li>
+                <li><a href="mailto:dynamiquecitoyenne2005@gmail.com" class="hover:underline">dynamiquecitoyenne2005@gmail.com</a></li>
+                <li><a href="tel:+237123456789" class="hover:underline">+237 123 456 789</a></li>
+            </ul>
+            </div>
+
+            <!-- Colonne 4 : Suivez-nous -->
+            <div>
+            <h3 class="text-lg font-semibold mb-3">Suivez-nous</h3>
+            <div class="flex items-center space-x-4 mb-3">
+                <a href="#" class="hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+            </div>
+            <hr class="border-gray-400 w-16 mb-2">
+            <a href="#" class="hover:underline text-sm">seremad.com</a>
+            </div>
+        </div>
+
+            <!-- Bas de page -->
+            <div class="text-center text-sm mt-10 border-t border-gray-500 pt-4">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-2">
+                <a href="#" class="hover:underline">Mentions légales</a>
+                <span>|</span>
+                <a href="#" class="hover:underline">Politique de confidentialité</a>
+                </div>
+
+                <p class="mt-3 font-semibold">
+                Copyright © <span id="year"></span> SEREMAD 2025
+                <span class="text-xs">(auto increment JS)</span>
+                </p>
+            </div>
+        </footer>
+
+        <!-- FontAwesome CDN -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <!-- Script JS pour année automatique -->
+        <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+
 </body>
 
 </html>
