@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEREMAD — Service de nettoyage</title>
+
+  <!-- Tailwind CDN (vite pour prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* petites personnalisations non fournies par Tailwind CDN */
+    .accent-orange { background: linear-gradient(90deg,#f59e0b,#fb923c); }
+    .card-shadow { box-shadow: 0 6px 18px rgba(15,23,42,0.08); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full accent-orange text-white flex items-center justify-center font-bold">S</div>
+        <div>
+          <h1 class="text-lg font-bold">SEREMAD</h1>
+          <p class="text-xs text-gray-500">Service de nettoyage</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#services" class="hover:underline">Nos services</a>
+        <a href="#histoire" class="hover:underline">Notre histoire</a>
+        <a href="#pourquoi" class="hover:underline">Pourquoi nous</a>
+        <a href="#contact" class="bg-orange-500 text-white px-4 py-2 rounded-md shadow-sm">Contactez-nous</a>
+      </nav>
+
+      <button class="md:hidden px-3 py-2 border rounded-md">☰</button>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-10">
+
+    <!-- HERO / Prospectus style 3-col -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Left image -->
+      <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+        <!-- Remplace le src par l'image du prospectus -->
+        <img src="IMG-20251027-WA0108.jpg" alt="Nettoyage" class="object-cover w-full h-96" />
+      </div>
+
+      <!-- Middle contact card -->
+      <div class="bg-white rounded-2xl p-8 card-shadow flex flex-col justify-center">
+        <h2 class="text-orange-500 font-bold text-lg mb-2">CONTACTEZ-NOUS</h2>
+        <p class="text-sm text-gray-600 mb-6">Pour un devis gratuit ou une intervention, contactez notre équipe.</p>
+
+        <ul class="space-y-4 text-sm text-gray-700">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h4l2 2h6a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div class="text-xs text-gray-500">Téléphone</div>
+              <div class="font-semibold">+33 6 40 50 76 58</div>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div class="text-xs text-gray-500">Email</div>
+              <div class="font-semibold">seremad48@gmail.com</div>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M21 10v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 10V7a5 5 0 0110 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div class="text-xs text-gray-500">Adresse</div>
+              <div class="font-semibold">193 avenue de la Maréchale, 94420 Le Plessis Trévise</div>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v10h12V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div class="text-xs text-gray-500">SIRET</div>
+              <div class="font-semibold">891 070 021 00011</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#contact" class="inline-block bg-orange-500 text-white px-4 py-2 rounded-md shadow">Demander un devis</a>
+          <a href="#services" class="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-md">Voir nos services</a>
+        </div>
+      </div>
+
+      <!-- Right tagline -->
+      <div class="bg-gradient-to-tr from-gray-800 to-gray-700 text-white rounded-2xl p-8 card-shadow flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm uppercase tracking-wide text-orange-300">L'hygiène et la propreté</h3>
+          <h2 class="text-2xl font-bold mt-4">C'est notre métier !</h2>
+          <p class="mt-4 text-sm text-gray-200">Prestation de nettoyage professionnelle pour entreprises et particuliers — solutions sur mesure, personnel qualifié et matériel adapté.</p>
+        </div>
+
+        <div class="mt-6 flex items-center justify-between">
+          <div class="text-sm">
+            <div class="text-xs text-gray-300">Service rapide • Professionnel • Fiable</div>
+          </div>
+          <a href="#contact" class="bg-orange-400 text-white px-4 py-2 rounded-md shadow">Contactez</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM BROCHURE-LIKE 3-COL -->
+    <section class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Notre histoire -->
+      <article id="histoire" class="bg-white rounded-2xl p-8 card-shadow">
+        <h4 class="text-orange-500 font-semibold">/ Notre histoire</h4>
+        <h3 class="text-2xl font-bold mt-3">La propreté, <span class="text-gray-600">Notre priorité</span></h3>
+        <p class="mt-4 text-sm text-gray-600">SEREMAD est une entreprise qui offre des services d'hygiène et de propreté aux professionnels mais aussi des prestations de nettoyage pour particuliers. Face à la crise sanitaire, nous proposons des solutions de désinfection et décontamination adaptées à tous types de locaux.</p>
+
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded bg-orange-100 flex items-center justify-center font-bold text-orange-600">1</div>
+            <div>
+              <div class="font-semibold">Nettoyage</div>
+              <div class="text-xs text-gray-500">Bureaux, résidences & copropriétés</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded bg-orange-100 flex items-center justify-center font-bold text-orange-600">2</div>
+            <div>
+              <div class="font-semibold">Nettoyage spécifique</div>
+              <div class="text-xs text-gray-500">Maisons, locaux commerciaux</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded bg-orange-100 flex items-center justify-center font-bold text-orange-600">3</div>
+            <div>
+              <div class="font-semibold">Vitrerie & Chantier</div>
+              <div class="text-xs text-gray-500">Vitres, remise en état</div>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Nos services -->
+      <article id="services" class="bg-gray-900 text-white rounded-2xl p-8 card-shadow">
+        <h4 class="text-orange-300 font-semibold">/ Nos services</h4>
+        <h3 class="text-2xl font-bold mt-3">Devis gratuit</h3>
+
+        <ol class="mt-6 space-y-4 text-sm">
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded bg-orange-500 flex items-center justify-center font-bold">1</div>
+            <div>
+              <div class="font-semibold">Nettoyage</div>
+              <div class="text-xs text-orange-200">Bureaux, résidences et copropriétés</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded bg-orange-500 flex items-center justify-center font-bold">2</div>
+            <div>
+              <div class="font-semibold">Nettoyage spécifique</div>
+              <div class="text-xs text-orange-200">Maisons, locaux commerciaux</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded bg-orange-500 flex items-center justify-center font-bold">3</div>
+            <div>
+              <div class="font-semibold">Vitrerie</div>
+              <div class="text-xs text-orange-200">Grandes surfaces et vitrines</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded bg-orange-500 flex items-center justify-center font-bold">4</div>
+            <div>
+              <div class="font-semibold">Nettoyage chantier</div>
+              <div class="text-xs text-orange-200">Remise en état</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded bg-orange-500 flex items-center justify-center font-bold">5</div>
+            <div>
+              <div class="font-semibold">Désinfection COVID</div>
+              <div class="text-xs text-orange-200">Mise en place de dispositifs de nettoyage et désinfection</div>
+            </div>
+          </li>
+        </ol>
+      </article>
+
+      <!-- Pourquoi nous solliciter -->
+      <article id="pourquoi" class="bg-white rounded-2xl p-8 card-shadow">
+        <h4 class="text-orange-500 font-semibold">/ Pourquoi nous solliciter ?</h4>
+        <h3 class="text-2xl font-bold mt-3">Des agents experts de la propreté</h3>
+        <p class="mt-4 text-sm text-gray-600">Faire appel à nos services, c'est gagner du temps et garantir une prestation de qualité respectant les règles d'hygiène et de sécurité. Nous proposons des professionnels équipés de matériels adaptés et des prestations sur-mesure répondant à vos besoins.</p>
+
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Professionnels équipés</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Prestation adaptée à vos besoins</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-orange-500 mt-1" viewBox="0 0 24 24" fill="none"><path d="M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v10h12V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Respect des normes sanitaires</div>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="mt-10 bg-white rounded-2xl p-8 card-shadow">
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-2xl font-bold">Demander un devis gratuit</h3>
+          <p class="mt-2 text-sm text-gray-600">Remplissez le formulaire et nous reviendrons vers vous sous 24h.</p>
+
+          <form class="mt-6 space-y-3" onsubmit="event.preventDefault(); alert('Formulaire envoyé (demo)');">
+            <div>
+              <label class="text-sm text-gray-600">Nom</label>
+              <input required class="w-full mt-1 px-3 py-2 border rounded-md" placeholder="Votre nom" />
+            </div>
+
+            <div>
+              <label class="text-sm text-gray-600">Email</label>
+              <input type="email" required class="w-full mt-1 px-3 py-2 border rounded-md" placeholder="email@exemple.com" />
+            </div>
+
+            <div>
+              <label class="text-sm text-gray-600">Message</label>
+              <textarea required class="w-full mt-1 px-3 py-2 border rounded-md" rows="4" placeholder="Décrivez votre besoin"></textarea>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-md">Envoyer</button>
+              <p class="text-xs text-gray-500">Ou appelez-nous : <span class="font-semibold">+33 6 40 50 76 58</span></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm text-orange-500">Informations</h4>
+            <p class="mt-2 text-sm text-gray-600">193 avenue de la Maréchale, 94420 Le Plessis Trévise</p>
+            <p class="mt-1 text-sm text-gray-600">seremad48@gmail.com</p>
+            <p class="mt-1 text-sm text-gray-600">SIRET: 891 070 021 00011</p>
+          </div>
+
+          <div class="mt-6">
+            <h5 class="text-xs text-gray-500">Horaires</h5>
+            <p class="text-sm text-gray-700">Lun - Ven: 8:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-10 text-center text-sm text-gray-500 pb-16">© <span id="year"></span> SEREMAD — Tous droits réservés</footer>
+  </main>
+
+  <script>
+    // année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
